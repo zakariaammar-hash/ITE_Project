@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITE F25</title>
+  <link rel="icon" type="image/png" href="myicon2.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Lato', sans-serif;
+        }
+
+        .marquee{
+            width:100%;
+            overflow:hidden;
+            position:absolute;
+            top:0;
+            left:0;
+            padding:8px 0;
+        }
+
+        .marquee-text{
+            white-space:nowrap;
+            font-family:"Cinzel", serif;
+            font-weight:700;
+            font-size:20px;
+            letter-spacing:1px;
+            display:inline-block;
+            transform: translateX(-100%);
+            animation: moveLR 10s linear infinite;
+            color:#2c3e50;
+        }
+
+        @keyframes moveLR{
+            0%   { transform: translateX(-100%); }
+            100% { transform: translateX(100vw); }
+        }
+
+        .decoration-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 4px;
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        .bar {
+            height: 5px;
+            background-color: #2c3e50;
+            border-radius: 2px;
+            opacity: 0; 
+            animation: slideIn 0.5s ease-out forwards;
+        }
+
+        .bar:nth-child(1) { animation-delay: 0.1s; }
+        .bar:nth-child(2) { animation-delay: 0.2s; }
+        .bar:nth-child(3) { animation-delay: 0.3s; }
+        .bar:nth-child(4) { animation-delay: 0.4s; }
+        .bar:nth-child(5) { animation-delay: 0.5s; }
+        .bar:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .login-card {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 350px;
+            border: 1px solid #e1e1e1;
+            opacity: 0;
+            animation: fadeCard 1s ease-out forwards;
+            animation-delay: 0.8s;
+        }
+
+        @keyframes fadeCard {
+            from { opacity: 0; transform: scale(0.9); }
+            to   { opacity: 1; transform: scale(1); }
+        }
+
+        .login-title {
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        .form-group { margin-bottom: 15px; text-align: left; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; color: #555; font-size: 14px; }
+        input { width: 100%; padding: 10px; border: 2px solid #ddd; border-radius: 5px; font-size: 16px; }
+        input:focus { outline: none; border-color: #3498db; }
+
+        .button-group { display: flex; justify-content: space-between; margin-top: 20px; }
+        button { padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        button[type="submit"] { background-color: #2c3e50; color: white; }
+        button[type="reset"] { background-color: #e74c3c; color: white; }
+    </style>
+</head>
+
+<body>
+
+    <div class="marquee">
+        <div class="marquee-text">
+            The National Higher School of Artificial Intelligence
+        </div>
+    </div>
+
+    <div class="decoration-container">
+        <div class="bar" style="width: 100%"></div>
+        <div class="bar" style="width: 90%"></div>
+        <div class="bar" style="width: 80%"></div>
+        <div class="bar" style="width: 70%"></div>
+        <div class="bar" style="width: 60%"></div>
+        <div class="bar" style="width: 50%"></div>
+    </div>
+
+    <div class="login-card">
+        <div class="login-title">Welcome to ITE F25</div>
+        <p style="margin-bottom: 20px; color: #666; font-size: 0.9em;">Please sign in to continue</p>
+        
+        <form action="ITE Project/First Page (CSS).html">
+            <div class="form-group">
+                <label>Username</label>
+                <input type="text" name="username" placeholder="Enter ID">
+            </div>
+            
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" name="password" placeholder="••••••••">
+            </div>
+            
+            <div class="button-group">
+                <button type="reset">Reset</button>
+                <button type="submit">Sign In</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="decoration-container">
+        <div class="bar" style="width: 50%"></div>
+        <div class="bar" style="width: 60%"></div>
+        <div class="bar" style="width: 70%"></div>
+        <div class="bar" style="width: 80%"></div>
+        <div class="bar" style="width: 90%"></div>
+        <div class="bar" style="width: 100%"></div>
+    </div>
+
+</body>
+</html>
